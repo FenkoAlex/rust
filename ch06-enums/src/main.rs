@@ -6,6 +6,7 @@ enum UsState {
     Alaska,
 }
 
+#[derive(Debug)]
 enum Coin {
     Penny,
     Nickel,
@@ -33,7 +34,32 @@ fn main() {
         println!("a != None");
     }
 
-    game();
+    let coin = Coin::Nickel;
+
+    if let Coin::Nickel = coin {
+        println!("you have Nickel");
+    }
+
+    let _ = 32;
+
+    // println!("{_}");
+
+    struct t1;
+    struct t2;
+    
+    enum Test {
+        t1,
+        t2,
+    }
+    let t = Test::t1;
+
+    // if t == t1 {
+    //     println!("you have t1");
+    // }
+
+    println!("{:?}", coin);
+
+    // game();
 }
 
 fn plus_one(x: Option<i32>) -> Option<i32> {
